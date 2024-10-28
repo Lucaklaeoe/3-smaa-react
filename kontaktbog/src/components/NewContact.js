@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+
 function NewContact() {
 
     const Style = {
@@ -12,6 +14,15 @@ function NewContact() {
         width:'100px',
         marginTop: '20px',
     }
+
+    const [contactCount, setContactCount] = useState(0);
+    function handleAddcontact() {
+
+      alert("Kontakt tilføjet")
+      setContactCount(count => count + 1);
+
+      
+  }
     return (
       <form style={Style}>
             <label>Fornavn:</label>
@@ -27,7 +38,10 @@ function NewContact() {
             <label> Position:</label>
             <input type="text" maxLength="20"/>
 
-        <button type="submit" style={ButtonStyle}>Send</button>
+            <p> Add kontakt</p>
+            <button type="button" onClick={handleAddcontact}>Tilføj kontakt</button>
+            {/* <button onClick={() => alert("Add kontakt")}> Add kontakt</button> */}
+            Kontakter tilføjet: { contactCount.toString() }
       </form>
     )
   }

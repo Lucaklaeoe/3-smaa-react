@@ -6,6 +6,7 @@ function MainPage() {
         backgroundColor: '#ff9d88',
         marginBottom: '20px',
     }
+
     return(
         <main>
             <div style={StyleFirst}>
@@ -17,6 +18,7 @@ function MainPage() {
             <div style={StyleFirst}>
                 <ContactPerson/>
             </div>
+
         </main>
         
     )

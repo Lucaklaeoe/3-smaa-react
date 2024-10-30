@@ -3,11 +3,13 @@ const PieceOfClothingStyle = {
     justifyContent: "flex-start",
     alignItems: "center",
     padding: "10px",
-    border: "1px solid black",
     margin: "10px",
     position: "relative",
     height: "130px",
     gap: "10px",
+    backgroundColor: "#4a95b9",
+    borderRadius: "10px",
+    color: "white",
 }
 const PieceOfClothingInfoStyle = {
     display: "flex",

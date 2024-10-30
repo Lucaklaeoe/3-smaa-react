@@ -3,7 +3,7 @@ import PieceOfClothing from "./PieceOfClothing";
 function Mainpage(){
     const data = [
         {id: 1, src: "1302151-22.w610.h610.fill.webp", title: "Jumper", price: "129.99", size: "S", color: "Black", model: "Jumper", description: "A black jumper with a red stripe on the chest."},
-        {id: 2, src: "APOF_Adine_Sienna_Blue_1.webp", title: "Jumper", price: "129.99", size: "S", color: "Black", model: "Jumper", description: "A black jumper with a red stripe on the chest."},
+        {id: 2, src: "APOF_Adine_Sienna_Blue_1.jpg", title: "Jumper", price: "129.99", size: "S", color: "Black", model: "Jumper", description: "A black jumper with a red stripe on the chest."},
         {id: 3, src: "jc30044_1_cloudzoom.jpg", title: "Jumper", price: "129.99", size: "S", color: "Black", model: "Jumper", description: "A black jumper with a red stripe on the chest."},
         {id: 4, src: "toej-uden-tryk.png", title: "Jumper", price: "129.99", size: "S", color: "Black", model: "Jumper", description: "A black jumper with a red stripe on the chest."},
     ]

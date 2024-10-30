@@ -12,15 +12,14 @@ function NewContact() {
     }
     const ButtonStyle = {
         width:'100px',
-        marginTop: '20px',
+        marginBottom: '20px',
     }
-
+    //get       //setændre
     const [contactCount, setContactCount] = useState(0);
     function handleAddcontact() {
 
-      alert("Kontakt tilføjet")
+      // alert("Kontakt tilføjet")
       setContactCount(count => count + 1);
-
       
   }
     return (
@@ -38,8 +37,8 @@ function NewContact() {
             <label> Position:</label>
             <input type="text" maxLength="20"/>
 
-            <p> Add kontakt</p>
-            <button type="button" onClick={handleAddcontact}>Tilføj kontakt</button>
+            <p> Tilføj kontakt</p>
+            <button style={ButtonStyle} type="button" onClick={handleAddcontact}>Tilføj kontakt</button>
             {/* <button onClick={() => alert("Add kontakt")}> Add kontakt</button> */}
             Kontakter tilføjet: { contactCount.toString() }
       </form>

@@ -1,11 +1,13 @@
 import ContactPerson from "./ContactPerson"
+import {usestate} from "react"
 function MainPage(props) {
     
-    const data =[
-        {id: 1, firstname: 'Emil', lastname: 'Berg', email: 'Emil@emil', firm: 'DSB', position:'CEO'},
-        {id: 2, firstname: 'Luca', lastname: 'Toft', email: 'Luca@gmail.com', firm: 'Jyskebank', position:'CEO'},
-        {id: 3, firstname: 'Sophia', lastname: 'Bjørk', email: 'Sophia@gmial.dk', firm: 'Falk', position:'CEO'},
-    ]
+
+    const [data, setData] = usestate([
+        {id: 1, firstname: 'Emil', lastname: 'Hansen', email: 'Emil@gmail.com', firm: 'DSB', position:'CEO'},
+        {id: 2, firstname: 'Luca', lastname: 'Klæø', email: 'Luca@gmail.com', firm: 'Jyskebank', position:'CEO'},
+        {id: 3, firstname: 'Sophia', lastname: 'Kingstone', email: 'Sophia@gmial.dk', firm: 'Falk', position:'CEO'},
+    ])
      
     const ContactStyle = {
         paddingBottom: '20px',
@@ -32,6 +34,8 @@ function MainPage(props) {
                 <h1 style={h1Style}>Kontakt Person</h1>
                 
                 <ContactPerson 
+                data={data} 
+                setData={setData}
                 key={item.id} 
                 firstname={item.firstname} 
                 lastname={item.lastname} 

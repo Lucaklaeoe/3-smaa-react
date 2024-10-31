@@ -50,10 +50,24 @@ const buttonBorderStyle = {
   zIndex: '1',
 };
 
+const modalButtonStyle ={
+  color: 'black',
+  backgroundColor: 'white',
+  fontSize: '1em',
+  border: '1px solid black',
+  padding: '14px 24px',
+  borderRadius: '5px',
+  cursor: 'pointer',
+  marginLeft: '10px',
+}
+
+
+
+
 // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
 Modal.setAppElement('#root');
 
-export default function MyModal() {
+function MyModal(props) {
   let subtitle;
   const [modalIsOpen, setIsOpen] = React.useState(false);
 
@@ -66,8 +80,19 @@ export default function MyModal() {
     subtitle.style.color = '#f00';
   }
 
+  function NewContact(){
+    // const firstname = document.getElementById('firstname').value;
+    // const lastname = document.getElementById('lastname').value;
+    // const email = document.getElementById('email').value;
+    // const firm = document.getElementById('firm').value;
+    // const position = document.getElementById('position').value;
+
+    // const NewContactList = [...props.contact, {firstname: {firstname}, lastname: {lastname}, email: {email}, firm: {firm}, position: {position}} ];
+    // props.setcontact(NewContactList);
+  }
   function closeModal() {
     setIsOpen(false);
+    NewContact();
   }
 
   return (
@@ -83,31 +108,38 @@ export default function MyModal() {
       >
         <h2 ref={(_subtitle) => (subtitle = _subtitle)}></h2>
         
-        <h1>TILFØJ NY KONTAKTPERSON</h1>
+        <h1>Udfyld kontaktformular</h1>
         <form style={formStyle}> 
           <label>
             First name:
-            <input type="text" name="firstname" />
-          </label>
+            </label>
+            <input type="text" name="firstname" id="firstname"/>
+          
           <label>
             Last name:
-            <input type="text" name="lastname" />
-          </label>
+            </label>
+            <input type="text" name="lastname" id="lastname" />
+          
           <label>
             Email:
-            <input type="email" name="email" />
-          </label>
+            </label>
+            <input type="email" name="email" id="email" />
+          
           <label>
             Firm:
-            <input type="text" name="firm" />
-          </label>
+            </label>
+            <input type="text" name="firm" id="firm" />
+          
           <label>
             Position:
-            <input type="text" name="position" />
-          </label>
+            </label>
+            <input type="text" name="position" id="position" />
+          
         </form>
-        <button onClick={closeModal}>Tilføj Kontakt</button>
+        <button style={modalButtonStyle} onClick={closeModal}>Tilføj Kontakt</button>
       </Modal>
     </div>
   );
 }
+
+export default MyModal

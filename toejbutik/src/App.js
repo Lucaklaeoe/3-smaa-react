@@ -1,5 +1,6 @@
 import './App.css';
 import Mainpage from './components/MainPage';
+import Prices from './components/Prices';
 
 function App() {
   return (

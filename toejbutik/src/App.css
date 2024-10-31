@@ -1,3 +1,7 @@
+html{
+  overflow-x: hidden;
+}
+
 .App {
   text-align: center;
 }
@@ -36,4 +40,13 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.knap{
+  background-color: white;
+  color: #778fbd;
+}
+.knap:hover{
+  background-color: #2252ac;
+  color: white;
 }

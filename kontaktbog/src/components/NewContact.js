@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import ButtonBorderStyle from './ButtonBorderStyle.css';
 
 const customStyles = {
   content: {
@@ -20,14 +21,34 @@ const formStyle = {
 }
 
 const buttonStyle = {
-  backgroundColor: '#ff9d88',
+  backgroundColor: 'black',
   color: 'white',
+  fontSize: '1.5em',
   border: 'none',
   padding: '10px 20px',
   borderRadius: '5px',
   cursor: 'pointer',
   marginLeft: '20px',
+  position:'fixed',
+  bottom: '50px',
+  right: '40px',
+  zIndex: '2',
 }
+
+const buttonBorderStyle = {
+  color: 'white',
+  fontSize: '1.5em',
+  border: 'none',
+  padding: '14px 24px',
+  borderRadius: '5px',
+  cursor: 'pointer',
+  marginLeft: '20px',
+  position: 'fixed',
+  bottom: '46px',
+  right: '36px',
+  backgroundImage: 'conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545)',
+  zIndex: '1',
+};
 
 // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
 Modal.setAppElement('#root');
@@ -51,7 +72,8 @@ export default function MyModal() {
 
   return (
     <div>
-      <button style={buttonStyle} onClick={openModal}>Open Modal</button>
+      <button  style={buttonStyle} onClick={openModal}>Tilføj Ny Kontakt</button>
+      <button className="spin-animation" style={buttonBorderStyle} onClick={openModal}>Tilføj Ny Kontakt</button>
       <Modal
         isOpen={modalIsOpen}
         onAfterOpen={afterOpenModal}

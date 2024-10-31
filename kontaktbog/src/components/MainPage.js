@@ -9,7 +9,7 @@ function MainPage(props) {
      
     const ContactStyle = {
         paddingBottom: '20px',
-        backgroundColor: '#ff9d88',
+        backgroundColor: '#181a1c',
         margin: '20px',
         borderRadius: '10px',
         paddingTop: '5px',

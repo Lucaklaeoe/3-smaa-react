@@ -10,7 +10,7 @@ function Prices({bought}){
 
     return (
         <div>
-            <h1>Total: {total}</h1>
+            <h1>Total: {total} kr</h1>
         </div>
     )
 }

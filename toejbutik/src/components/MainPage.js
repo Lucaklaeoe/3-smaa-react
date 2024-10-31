@@ -26,13 +26,13 @@ function Mainpage(){
             <Prices bought={bought}/>
             <div style={{display: "flex", gap: "50px"}}>
                 <div>
-                    <h1 style={{width: "50vw"}}>Buy</h1>
+                    <h1 style={{width: "50vw"}}>Buy {tobuy.length > 0 ? "(" + tobuy.length + ")" : " "} </h1>
                     {tobuy.map(item => 
                         <PieceOfClothing tobuy={tobuy} settobuy={settobuy} bought={bought} setbought={setbought} id={item.id} src={item.src} title={item.title} price={item.price} size={item.size} color={item.color} model={item.model} description={item.description} isbought={item.isbought}/>
                     )}
                 </div>
                 <div>
-                    <h1 style={{width: "50vw"}}>In cart</h1>
+                    <h1 style={{width: "50vw"}}>In cart {bought.length > 0 ? "(" + bought.length + ")" : " "}</h1>
                     {bought.map(item =>
                         <PieceOfClothing tobuy={tobuy} settobuy={settobuy} bought={bought} setbought={setbought} id={item.id} src={item.src} title={item.title} price={item.price} size={item.size} color={item.color} model={item.model} description={item.description} isbought={item.isbought}/>
                     )}

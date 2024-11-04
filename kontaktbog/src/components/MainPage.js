@@ -1,15 +1,19 @@
 import ContactPerson from "./ContactPerson"
+import {useState} from "react"
+import NewContact from "./NewContact"
 function MainPage(props) {
     
-    const data =[
-        {id: 1, firstname: 'Emil', lastname: 'Berg', email: 'Emil@emil', firm: 'DSB', position:'CEO'},
-        {id: 2, firstname: 'Luca', lastname: 'Toft', email: 'Luca@gmail.com', firm: 'Jyskebank', position:'CEO'},
-        {id: 3, firstname: 'Sophia', lastname: 'Bjørk', email: 'Sophia@gmial.dk', firm: 'Falk', position:'CEO'},
-    ]
+//Når noget står inde i nogen krølleparentese {} skriver man istedet for at skrive props. Det kaldes også destructering.  
+
+    const [data, setData] = useState([ 
+        {id: 1, firstname: 'Emil', lastname: 'Hansen', email: 'Emil@gmail.com', phone: '12345678', firm: 'DSB', position:'CEO'},
+        {id: 2, firstname: 'Luca', lastname: 'Klæø', email: 'Luca@gmail.com', phone: '12345678', firm: 'Jyskebank', position:'CEO'},
+        {id: 3, firstname: 'Sophia', lastname: 'Kingstone', email: 'Sophia@gmial.dk', phone: '12345678', firm: 'Falk', position:'CEO'},
+    ])
      
     const ContactStyle = {
         paddingBottom: '20px',
-        backgroundColor: '#ff9d88',
+        backgroundColor: '#181a1c',
         margin: '20px',
         borderRadius: '10px',
         paddingTop: '5px',
@@ -36,12 +40,17 @@ function MainPage(props) {
                 firstname={item.firstname} 
                 lastname={item.lastname} 
                 email={item.email} 
+                phone={item.phone}
                 firm={item.firm} 
                 position={item.position}/>
             </div>
             )}
 
             </div>
+            <NewContact 
+            data={data} 
+            setData={setData}
+            />
         </main>
         
     )

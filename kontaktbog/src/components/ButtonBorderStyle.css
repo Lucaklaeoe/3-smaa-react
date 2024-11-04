@@ -1,0 +1,19 @@
+/* Definer CSS-variabelen og keyframes */
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+.spin-animation {
+    animation: spin 3s linear infinite;
+}

@@ -9,7 +9,6 @@ function App() {
   return (
    <div style={background}>
       <MainPage />
-      <NewContact />
    </div>
       
 

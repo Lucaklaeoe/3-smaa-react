@@ -81,14 +81,16 @@ function MyModal(props) {
   }
 
   function NewContact(){
-    // const firstname = document.getElementById('firstname').value;
-    // const lastname = document.getElementById('lastname').value;
-    // const email = document.getElementById('email').value;
-    // const firm = document.getElementById('firm').value;
-    // const position = document.getElementById('position').value;
+    const firstname = document.getElementById('firstname').value;
+    const lastname = document.getElementById('lastname').value;
+    const email = document.getElementById('email').value;
+    const firm = document.getElementById('firm').value;
+    const position = document.getElementById('position').value;
 
-    // const NewContactList = [...props.contact, {firstname: {firstname}, lastname: {lastname}, email: {email}, firm: {firm}, position: {position}} ];
-    // props.setcontact(NewContactList);
+    const NewContactList = [...props.data, {firstname: {firstname}, lastname: {lastname}, email: {email}, firm: {firm}, position: {position}} ];
+    props.setData(NewContactList);
+
+    alert('Kontakt er tilføjet');
   }
   function closeModal() {
     setIsOpen(false);
@@ -131,7 +133,7 @@ function MyModal(props) {
             <input type="text" name="firm" id="firm" />
           
           <label>
-            Position:
+            Stilling2:
             </label>
             <input type="text" name="position" id="position" />
           

@@ -1,9 +1,9 @@
 import ContactPerson from "./ContactPerson"
-import {usestate} from "react"
+import {useState} from "react"
 function MainPage(props) {
     
 
-    const [data, setData] = usestate([
+    const [data, setData] = useState([ //Når noget står inde i nogen krølleparentese {} skriver man istedet for at skrive props. Det kaldes også destructering.  
         {id: 1, firstname: 'Emil', lastname: 'Hansen', email: 'Emil@gmail.com', firm: 'DSB', position:'CEO'},
         {id: 2, firstname: 'Luca', lastname: 'Klæø', email: 'Luca@gmail.com', firm: 'Jyskebank', position:'CEO'},
         {id: 3, firstname: 'Sophia', lastname: 'Kingstone', email: 'Sophia@gmial.dk', firm: 'Falk', position:'CEO'},

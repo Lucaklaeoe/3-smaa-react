@@ -13,7 +13,7 @@ const MainpageStyle = {
 
 function Mainpage(){
     const [tobuy, settobuy] = useState([
-        {id: 1, src: "1302151-22.w610.h610.fill.webp", title: "Frage", price: 392.75, size: "L", color: "Mørke grøn", model: "Dame", description: "En grøn frage til alt slags vejr.", isbought: false},
+        {id: 1, src: "1302151-22.w610.h610.fill.webp", title: "Frakke", price: 392.75, size: "L", color: "Mørke grøn", model: "Dame", description: "En grøn frage til alt slags vejr.", isbought: false},
         {id: 2, src: "APOF_Adine_Sienna_Blue_1.png", title: "Skjote", price: 100.50, size: "S", color: "Blå", model: "Herre", description: "Tergnet skjote.", isbought: false},
         {id: 3, src: "jc30044_1_cloudzoom.png", title: "Jumper", price: 150.99, size: "M", color: "Hvid", model: "Dame", description: "En hvid jumper.", isbought: false},
         {id: 4, src: "toej-uden-tryk.png", title: "T-Shirt", price: 175, size: "S", color: "Blå", model: "Herre", description: "En blå t-shirt.", isbought: false},

@@ -1,6 +1,45 @@
 .App {
   text-align: center;
 }
+h1{
+  color: #0d8bd9;
+  font-size: 80px;
+}
+form{
+  display: grid;
+}
+.avatar{
+  display: flex;
+}
+form input{
+  font-size: 1em;
+  padding: 0.5em;
+  border-radius: 10px;
+  width: 475px;
+}
+form textarea{
+  font-size: 1em;
+  padding: 0.5em;
+  border-radius: 10px;
+  width: 475px;
+  height: 250px;
+}
+form button{
+  font-size: 1em;
+  padding: 0.5em;
+  border-radius: 10px;
+}
+form img{
+  width: 80px;
+}
+.dislike-likeBtn{
+  background-color: transparent;
+  border: none;
+}
+.thumbs{
+  font-size: 2em;
+  color: white;
+} 
 
 .App-logo {
   height: 40vmin;

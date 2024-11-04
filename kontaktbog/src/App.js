@@ -1,5 +1,5 @@
 import MainPage from './components/MainPage';
-import NewContact from './components/NewContact';
+
 
 const background ={
   backgroundColor: 'black',

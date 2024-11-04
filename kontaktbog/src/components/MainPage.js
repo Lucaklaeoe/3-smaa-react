@@ -6,9 +6,9 @@ function MainPage(props) {
 //Når noget står inde i nogen krølleparentese {} skriver man istedet for at skrive props. Det kaldes også destructering.  
 
     const [data, setData] = useState([ 
-        {id: 1, firstname: 'Emil', lastname: 'Hansen', email: 'Emil@gmail.com', firm: 'DSB', position:'CEO'},
-        {id: 2, firstname: 'Luca', lastname: 'Klæø', email: 'Luca@gmail.com', firm: 'Jyskebank', position:'CEO'},
-        {id: 3, firstname: 'Sophia', lastname: 'Kingstone', email: 'Sophia@gmial.dk', firm: 'Falk', position:'CEO'},
+        {id: 1, firstname: 'Emil', lastname: 'Hansen', email: 'Emil@gmail.com', phone: '12345678', firm: 'DSB', position:'CEO'},
+        {id: 2, firstname: 'Luca', lastname: 'Klæø', email: 'Luca@gmail.com', phone: '12345678', firm: 'Jyskebank', position:'CEO'},
+        {id: 3, firstname: 'Sophia', lastname: 'Kingstone', email: 'Sophia@gmial.dk', phone: '12345678', firm: 'Falk', position:'CEO'},
     ])
      
     const ContactStyle = {
@@ -40,6 +40,7 @@ function MainPage(props) {
                 firstname={item.firstname} 
                 lastname={item.lastname} 
                 email={item.email} 
+                phone={item.phone}
                 firm={item.firm} 
                 position={item.position}/>
             </div>

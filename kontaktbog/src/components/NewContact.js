@@ -63,7 +63,6 @@ const modalButtonStyle ={
 
 
 
-
 // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
 Modal.setAppElement('#root');
 
@@ -81,21 +80,29 @@ function MyModal(props) {
   }
 
   function NewContact(){
-    const firstname = document.getElementById('firstname').value;
-    const lastname = document.getElementById('lastname').value;
-    const email = document.getElementById('email').value;
-    const firm = document.getElementById('firm').value;
-    const position = document.getElementById('position').value;
+    const Firstname = document.getElementById('firstname').value;
+    const Lastname = document.getElementById('lastname').value;
+    const Email = document.getElementById('email').value;
+    const Phone = document.getElementById('phone').value;
+    const Firm = document.getElementById('firm').value;
+    const Position = document.getElementById('position').value;
 
-    const NewContactList = [...props.data, {firstname: {firstname}, lastname: {lastname}, email: {email}, firm: {firm}, position: {position}} ];
+    if(!Firstname || !Lastname || !Email || !Phone || !Firm || !Position) {
+      alert('Du skal udfylde alle felter');
+      return;
+      //Når return står til sidst betyder at funktionen stopper med kører. 
+    }
+
+    const NewContactList = [...props.data, {firstname: Firstname, lastname: Lastname, email: Email, phone: Phone, firm: Firm, position: Position} ];
     props.setData(NewContactList);
 
-    alert('Kontakt er tilføjet');
+    
   }
   function closeModal() {
     setIsOpen(false);
     NewContact();
   }
+
 
   return (
     <div>
@@ -115,7 +122,7 @@ function MyModal(props) {
           <label>
             First name:
             </label>
-            <input type="text" name="firstname" id="firstname"/>
+            <input type="text" name="firstname" id="firstname" />
           
           <label>
             Last name:
@@ -126,6 +133,11 @@ function MyModal(props) {
             Email:
             </label>
             <input type="email" name="email" id="email" />
+
+            <label>
+            Telefon:
+            </label>
+            <input type="text" name="phone" id="phone" />
           
           <label>
             Firm:
@@ -133,7 +145,7 @@ function MyModal(props) {
             <input type="text" name="firm" id="firm" />
           
           <label>
-            Stilling2:
+            Stilling:
             </label>
             <input type="text" name="position" id="position" />
           

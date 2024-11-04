@@ -10,16 +10,34 @@ function AddPip({pips, setPips}) {
     const [pip, setPip] = useState(''); // what the user sees in the input type="text"
     const [name, setName] = useState('');
     const [error, setError] = useState(null);
+
+    //import personer
+    const Aiden = createAvatar(bigEars, {
+        "seed": "Aiden",
+    });
     const Christian = createAvatar(bigEars, {
         "seed": "Christian",
-      });
-      const christian = Christian.toDataUri();
+    });
+    const Ryan = createAvatar(bigEars, {
+        "seed": "Ryan",
+    });
+    const Wyatt = createAvatar(bigEars, {
+        "seed": "Wyatt",
+    });
+    const Robert = createAvatar(bigEars, {
+        "seed": "Robert",
+    });
+    const Oliver = createAvatar(bigEars, {
+        "seed": "Oliver",
+    });
 
-      const Aiden = createAvatar(bigEars, {
-        "seed": "Aiden",
-      });
-      const aiden = Aiden.toDataUri();
-   
+    //declear personer
+    const christian = Christian.toDataUri();
+    const aiden = Aiden.toDataUri();
+    const rayn = Ryan.toDataUri();
+    const wyatt = Wyatt.toDataUri();
+    const robert = Robert.toDataUri();
+    const oliver = Oliver.toDataUri();
     
     const handleOnPipChange = (event) => {
         console.log(event.target.value);
@@ -32,18 +50,36 @@ function AddPip({pips, setPips}) {
         } else {
           
             // opretter et nyt array og tilføjer det nye todo til array'et. YES!
-           
-            const newPipArray = [...pips, { id: pips.length + 1, title: pip, name: name, completed: false,  }];
+
+            const avatar = document.querySelector(".active").src;
+
+            const newPipArray = [...pips, { id: pips.length + 1, title: pip, name: name, avatar: avatar}];
             setPips(newPipArray);
         }
+    }
+
+                
+    const avarar = document.querySelectorAll('#avatars img');
+    function handleRemovePip(avatar) {
+
+        avarar.forEach(element => {
+            element.classList.remove('active');
+        });
+
+        avatar.classList.add('active');
     }
 
     return (
         <div>
         <form>
-        
-          <img src={christian} alt="avatar" />
-          <img src={aiden} alt="avatar" />
+            <div style={{display: 'flex', justifyContent: 'space-between'}} className='avatars' id='avatars'>
+                <img src={christian} alt="avatar" onClick={(event) => handleRemovePip(event.target)}/>
+                <img src={aiden} alt="avatar" onClick={(event) => handleRemovePip(event.target)}/>
+                <img src={rayn} alt="avatar" onClick={(event) => handleRemovePip(event.target)}/>
+                <img src={wyatt} alt="avatar" onClick={(event) => handleRemovePip(event.target)}/>
+                <img src={robert} alt="avatar" onClick={(event) => handleRemovePip(event.target)}/>
+                <img src={oliver} alt="avatar" onClick={(event) => handleRemovePip(event.target)}/>
+            </div>
         
             <input 
             type="text" 

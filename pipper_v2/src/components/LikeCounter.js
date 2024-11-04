@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ThumbsUp, ThumbsDown } from 'lucide-react';
+import { ThumbsUp, ThumbsDown, Scale } from 'lucide-react';
 import '../App.css';
 
 
@@ -16,12 +16,17 @@ function LikeCounter() {
     }
     // JSX
     return (
-        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-     
-            <button style={{color: 'white', margin: '0', fontSize: '1em', backgroundColor: 'transparent', border: 'none'}}  onClick={() => handleLikes(1)}><ThumbsUp className="thumbs" /></button>
-            <p style={{color: 'white', margin: '0', fontSize: '1em'}}> {likes}</p>
-            <button style={{color: 'white', margin: '0', fontSize: '1em', backgroundColor: 'transparent', border: 'none'}} onClick={() => handledislikes(1)}><ThumbsDown className="thumbs" /></button>
-            <p style={{color: 'white', margin: '0', fontSize: '1em'}}> {dislikes}</p>
+        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '20px'}}>
+            
+            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', height: '36px'}}>
+                <button style={{color: 'white', margin: '0', fontSize: '1em', backgroundColor: 'transparent', border: 'none', cursor: 'pointer', transform: 'scale(1.5)'}}  onClick={() => handleLikes(1)}><ThumbsUp className="thumbs" /></button>
+                <p style={{color: 'white', margin: '0', fontSize: '1em'}}> {likes}</p>
+            </div>
+            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                <button style={{color: 'white', margin: '0', fontSize: '1em', backgroundColor: 'transparent', border: 'none', cursor: 'pointer', transform: 'scale(1.5)'}} onClick={() => handledislikes(1)}><ThumbsDown className="thumbs" /></button>
+                <p style={{color: 'white', margin: '0', fontSize: '1em'}}> {dislikes}</p>
+            </div>
+
         </div>
     )
 }
